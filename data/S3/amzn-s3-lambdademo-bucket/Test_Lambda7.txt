@@ -1,0 +1,2 @@
+Dit is al het 7e testbestand om de Lambda functionaliteit
+in AWS uit te proberen

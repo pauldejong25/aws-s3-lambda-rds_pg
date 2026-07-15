@@ -1,0 +1,18 @@
+{
+  "Records": [
+    {
+      "eventTime": "2026-07-07T10:30:00Z",
+      "eventName": "ObjectCreated:Put",
+      "awsRegion": "eu-north-1",
+      "s3": {
+        "bucket": {
+          "name": "amzn-s3-lambdademo-bucket"
+        },
+        "object": {
+          "key": "Test_Lambda6.txt",
+          "size": 55
+        }
+      }
+    }
+  ]
+}
