@@ -1,4 +1,5 @@
-AWS S3 → Lambda → Amazon RDS PostgreSQL
+# AWS S3 → Lambda → Amazon RDS PostgreSQL
+
 Project overview
 
 This project demonstrates an event-driven AWS architecture where files uploaded to Amazon S3 automatically trigger an AWS Lambda function.
@@ -11,7 +12,7 @@ reads the file contents
 logs information to CloudWatch
 stores metadata in an Amazon RDS PostgreSQL database
 
-Architecture
+# Architecture
 
           +----------------+
           |   Amazon S3    |
@@ -31,10 +32,11 @@ Architecture
  CloudWatch Logs     Amazon RDS
                     PostgreSQL
 					
-AWS Services used
+## AWS Services used
 - Amazon S3
   - General Purpose bucket
 - AWS Lambda
+  - Python 3.13
   - Functions, with enviroment variables
   - Layers
   - Test Event JSON
@@ -54,16 +56,17 @@ Technologies used
   - psycopg2
 - PostgreSQL (scripts)
 - DBeaver
-- Visual Studio
+- Visual Studio Code
 
 Features
 - automatic S3 event processing
 - reads object metadata
 - reads file contents
-- inserts metadata into PostgreSQL
+- automatic insertion of metadata into PostgreSQL
 - CloudWatch logging
 - environment variables for configuration
 - Lambda Layer for psycopg2
+- VPC-secured Lambda connectivity
 
 Lessons learned
 - Lambda networking inside a VPC
@@ -74,3 +77,15 @@ Lessons learned
 - IAM permissions
 - PostgreSQL connectivity
 - CloudWatch debugging
+- Lambda execution roles
+- IAM Policy Simulator
+- VPC networking
+- Amazon RDS connectivity
+
+## Future improvements
+
+- Store database credentials in AWS Secrets Manager.
+- Add automated deployment using GitHub Actions.
+
+- Parse CSV and JSON files.
+- Support multiple S3 buckets.
