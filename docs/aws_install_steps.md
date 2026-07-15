@@ -1,9 +1,9 @@
-AWS Install steps
+# AWS Install steps
 
 1. Deploy a lambda function (python)
 2. Postgres RDS instance aanmaken en deze via een lambda functie benaderen
 
-1 Deploy a lambda function (python)
+# 1 Deploy a lambda function (python)
 
 Lambda Handler parameters:
 Event:
@@ -72,7 +72,7 @@ aws iam get-role-policy --role-name logS3ObjectCreated-role-fq7z4thh --policy-na
 
 Deze role moet de inline Policies ListBucket en ReadObjects bevatten. Deze moeten indien nodig toegevoegd worden en zijn nodig voor resp. s3.get_object (objectdata) en s3.head_object (metadata)
 
-2. Postgres RDS instance aanmaken en deze via een lambda functie benaderen
+# 2. Postgres RDS instance aanmaken en deze via een lambda functie benaderen
 
 - Nieuwe RDS voor Postgres
 
